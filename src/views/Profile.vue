@@ -1,102 +1,47 @@
 <template>
-	<div class="profile-page">
-		<div class="user-info">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 col-md-10 offset-md-1">
-						<img src="https://i.imgur.com/wAoYezk.jpg" class="user-img" />
-						<h4>{{ fullName }}</h4>
+	<v-card variant="tonal" class="pa-6">
+		<div class="d-flex flex-no-wrap justify-space-between">
+			<div>
+				<v-card-title>
+					{{ fullName }}
+				</v-card-title>
+				<v-card-subtitle>
+					{{ username }}
+				</v-card-subtitle>
+				<v-card-text>
+					<div class="text--primary">
 						<p>
-							Below the User Info section, we are going to implement the Tabs and Articles section. It is
-							similar to the Home screen
-							which has the tab options and the article feed. We are not going to feed the dynamic data
-							but implement static article
-							feed data since we don’t have any user feed. The template for the Tabs and Articles section
-							is provided in the code
-							snippet below:
+							One day this will contain useful information about the user's profile and allow them to
+							manage their
+							info. For now it is just a little fun with <a href="https://www.bobrosslipsum.com/">Bob
+								Ross.</a>
+							<br><br>
+							Let's have a little bit of fun today. The only thing worse than yellow snow is green snow.
+							It's hard
+							to
+							see
+							things when you're too close. Take a step back and look. Take your time. Speed will come
+							later.
+							Paint
+							anything you want
+							on the canvas. Create your own world.
+							<br><br>
+							Let's put some happy trees and bushes back in here. That easy. Happy painting, God bless.
+							All those
+							little son of a
+							guns. Even the worst thing we can do here is good.
 						</p>
 					</div>
-				</div>
+				</v-card-text>
+				<v-card-actions>
+					<v-btn>Click me</v-btn>
+				</v-card-actions>
 			</div>
+			<v-avatar class="ma-6" size="100">
+				<v-img alt="Avatar" src="src/assets/profile.jpg"></v-img>
+			</v-avatar>
 		</div>
-
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-10 offset-md-1">
-					<div class="articles-toggle">
-						<ul class="nav nav-pills outline-active">
-							<li class="nav-item">
-								<a class="nav-link active" href="">My Articles</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="">Favorites</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="article-preview">
-						<div class="article-meta">
-							<a href="profile.html"><img src="https://i.imgur.com/wAoYezk.jpg" /></a>
-							<div class="info">
-								<a href="" class="author">Kriss Kawa</a>
-								<span class="date">February 20th</span>
-							</div>
-							<button class="btn btn-outline-primary btn-sm pull-xs-right">
-								<i class="ion-heart"></i> 28
-							</button>
-						</div>
-						<a href="" class="preview-link">
-							<h1>How to build robust and dynamic React Native apps</h1>
-							<p>Learn about basics of React Native app development</p>
-							<span>Read more...</span>
-						</a>
-					</div>
-
-					<div class="article-preview">
-						<div class="article-meta">
-							<a href="profile.html"><img src="http://i.imgur.com/N4VcUeJ.jpg" /></a>
-							<div class="info">
-								<a href="" class="author">Gaza Lang</a>
-								<span class="date">March 20th</span>
-							</div>
-							<button class="btn btn-outline-primary btn-sm pull-xs-right">
-								<i class="ion-heart"></i> 10
-							</button>
-						</div>
-						<a href="" class="preview-link">
-							<h1>The mark of good web developer.</h1>
-							<p>This is the description for the post.</p>
-							<span>Read more...</span>
-						</a>
-					</div>
-
-					<div class="article-preview">
-						<div class="article-meta">
-							<a href=""><img src="https://i.imgur.com/wAoYezk.jpg" /></a>
-							<div class="info">
-								<a href="" class="author">Kriss Kawa</a>
-								<span class="date">April 25th</span>
-							</div>
-							<button class="btn btn-outline-primary btn-sm pull-xs-right">
-								<i class="ion-heart"></i> 19
-							</button>
-						</div>
-						<a href="" class="preview-link">
-							<h1>
-								Flutter Image Upload with Firebase
-							</h1>
-							<p>This is the description for the post.</p>
-							<span>Read more...</span>
-							<ul class="tag-list">
-								<li class="tag-default tag-pill">Flutter</li>
-								<li class="tag-default tag-pill">Dart</li>
-							</ul>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	</v-card>
 </template>
 
 <script lang="ts">

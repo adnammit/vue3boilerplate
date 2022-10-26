@@ -17,6 +17,8 @@ export const useMainStore = defineStore({
 
 	actions: {
 		setUser(payload: any) {
+			console.log('user')
+			console.log(payload)
 			const user = {
 				email: payload.email,
 				username: payload.preferred_username,

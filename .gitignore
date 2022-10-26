@@ -18,6 +18,7 @@ coverage
 /cypress/screenshots/
 
 config*.json
+.env*
 
 # Editor directories and files
 .vscode/*

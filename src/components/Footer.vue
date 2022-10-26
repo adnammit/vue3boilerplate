@@ -1,33 +1,22 @@
 <template>
-	<footer>
-		<div class="container">
-			<router-link to="/" class="logo-font">Medium Clone</router-link>
-			<span class="attribution">
-				A Real World Vue project from <a href="https://kriss.io">Kriss</a>.
-			</span>
-		</div>
-	</footer>
+	<v-footer class="grey-darken-1">
+		<strong>Made by <a href="https://github.com/adnammit">@adnammit</a></strong>
+		<v-spacer></v-spacer>
+		<v-btn flat icon="mdi-github" href="https://github.com/adnammit"></v-btn>
+		<v-btn flat icon="mdi-home" href="https://amandaryman.com"></v-btn>
+	</v-footer>
 </template>
 
-<style>
-footer {
-	background: #373a3c;
-	margin-top: 3rem;
-	padding: 1rem 0;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-footer .logo-font {
-	vertical-align: middle;
-}
+export default defineComponent({
+	name: 'Footer'
+})
+</script>
 
-footer .attribution {
-	vertical-align: middle;
-	margin-left: 10px;
-	font-size: 0.9rem;
-	color: #FFF;
-	font-weight: 300;
+<style scoped lang="scss">
+.v-footer {
+	max-height: 70px;
 }
 </style>

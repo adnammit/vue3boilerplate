@@ -23,7 +23,9 @@ npm run lint
 * Vuex is being deprecated so let's use [Pinia! 🍍](https://pinia.vuejs.org/core-concepts/)
 * [More about Pinia](https://www.vuemastery.com/blog/advantages-of-pinia-vs-vuex/)
 * [Vite Configuration Reference](https://vitejs.dev/config/)
+* [Static deployment using Vite](https://vitejs.dev/guide/static-deploy.html)
 * [Okta and Vue3](https://stackoverflow.com/questions/70910754/how-to-set-up-a-vue-app-with-okta-auth-with-composition-api)
+* [Vuetify 3 beta](https://next.vuetifyjs.com/en/)
 * [lint](https://eslint.org/)
 * For Vue3 it is recommended to disable Vetur and use VSCode extensions [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) and [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 
@@ -34,15 +36,22 @@ Auth is configured in config.json and can be accessed in the application by impo
 
 To protect a page, add the `requiresAuth` attribute to its route in `router/index`
 
+Website can be accessed via a test account:
+```
+test@amandaryman.com
+K5s48d!0ZDm7
+```
+
 ## To-do
-* scss
+* change auth to something more flexible/remove redirect
 * lazy-loading in router/index.ts
 * get knowing about CompositionAPI and OptionsAPI
-* add Vuetify
-* footer cuts off content
+* scss -- maybe? css may be preferred
+* update footer link to github repo when you have one
 
 ## Done
 * absolute component paths
+* add Vuetify
 
 
 ## Type Support for `.vue` Imports in TS

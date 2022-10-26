@@ -1,0 +1,77 @@
+@import '@/assets/colors';
+
+#app {
+	margin: 0 auto;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+
+.v-theme--light {
+
+	span,
+	div,
+	strong,
+	i.v-icon.v-icon {
+		color: $tundora
+	}
+
+	.v-main.main-body {
+		background-color: $gallery;
+	}
+}
+
+.v-theme--dark {
+
+	span,
+	div,
+	strong,
+	i.v-icon.v-icon {
+		color: $silver
+	}
+
+	.v-main.main-body {
+		background-color: $cod-gray;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $curious-blue;
+	transition: 0.4s;
+}
+
+.app-title {
+	div h1 {
+		color: $goblin !important;
+	}
+
+	letter-spacing: 0px;
+	padding: 2px;
+}
+
+.app-title div {
+	color: $goblin !important;
+}
+
+// i.v-icon.v-icon {
+// 	color: $dove-gray;
+// }
+
+// @media (hover: hover) {
+// 	a:hover {
+// 		background-color: hsla(160, 100%, 37%, 0.2);
+// 	}
+// }
+
+// @media (min-width: 1024px) {
+// 	body {
+// 		display: flex;
+// 		place-items: center;
+// 	}
+
+// 	#app {
+// 		display: grid;
+// 		grid-template-columns: 1fr 1fr;
+// 		padding: 0 2rem;
+// 	}
+// }

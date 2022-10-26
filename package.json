@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "serve": "vite preview",
-    "build": "vite build",
+    "build": "vite build --base=/vue3/",
     "test:unit": "vitest --environment jsdom --root src/",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "build-only": "vite build",
@@ -12,7 +12,6 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
   },
   "dependencies": {
-    "@mdi/font": "5.9.55",
     "@okta/okta-auth-js": "^7.0.1",
     "@okta/okta-vue": "^5.5.0",
     "pinia": "^2.0.23",
@@ -23,6 +22,7 @@
     "webfontloader": "^1.0.0"
   },
   "devDependencies": {
+    "@mdi/font": "^7.0.96",
     "@rushstack/eslint-patch": "^1.1.4",
     "@types/jsdom": "^20.0.0",
     "@types/node": "^16.11.68",
@@ -37,6 +37,7 @@
     "jsdom": "^20.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
+    "sass": "^1.55.0",
     "typescript": "~4.7.4",
     "vite": "^3.1.8",
     "vite-plugin-vuetify": "^1.0.0-alpha.12",
