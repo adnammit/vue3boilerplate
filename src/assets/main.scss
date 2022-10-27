@@ -40,38 +40,22 @@ a {
 	transition: 0.4s;
 }
 
-.app-title {
-	div h1 {
-		color: $goblin !important;
-	}
-
-	letter-spacing: 0px;
-	padding: 2px;
-}
-
-.app-title div {
-	color: $goblin !important;
-}
-
-// i.v-icon.v-icon {
-// 	color: $dove-gray;
+// .submit.v-btn {
+// 	color: $curious-blue
 // }
 
-// @media (hover: hover) {
-// 	a:hover {
-// 		background-color: hsla(160, 100%, 37%, 0.2);
-// 	}
-// }
-
-// @media (min-width: 1024px) {
-// 	body {
-// 		display: flex;
-// 		place-items: center;
+// .submit {
+// 	.v-btn__content {
+// 		// color: red
 // 	}
 
-// 	#app {
-// 		display: grid;
-// 		grid-template-columns: 1fr 1fr;
-// 		padding: 0 2rem;
-// 	}
+// 	// .v-btn__overlay {
+// 	// 	opacity: .5;
+// 	// }
+
+// 	// .v-btn__overlay,
+// 	// .v-btn__underlay {
+// 	// 	color: $curious-blue;
+// 	// }
 // }
+

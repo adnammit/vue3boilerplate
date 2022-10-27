@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
 import Profile from '@/views/Profile.vue'
-import { navigationGuard, LoginCallback } from '@okta/okta-vue'
+import Login from '@/views/Login.vue'
+import Settings from '@/views/Settings.vue'
+import { useMainStore } from '@/store'
 
 const router = createRouter({
-	// base: process.env.BASE_URL
 	history: createWebHistory(import.meta.env.BASE_URL),
 	routes: [
 		{
@@ -21,6 +22,11 @@ const router = createRouter({
 		// 	component: () => import('../views/AboutView.vue')
 		// },
 		{
+			path: '/login',
+			name: 'login',
+			component: Login
+		},
+		{
 			path: '/:username',
 			name: 'profile',
 			component: Profile,
@@ -29,12 +35,22 @@ const router = createRouter({
 			}
 		},
 		{
-			path: '/login/callback',
-			component: LoginCallback,
-		}
+			path: '/settings',
+			name: 'settings',
+			component: Settings,
+			meta: {
+				requiresAuth: true
+			}
+		},
 	]
 })
 
-router.beforeEach(navigationGuard);
+router.beforeEach(async (to) => {
+	const authRequired = to.matched.some(record => record.meta.requiresAuth)
+	const store = useMainStore();
+	if (authRequired && !store.user?.username) {
+		return { name: 'login' };
+	}
+});
 
 export default router

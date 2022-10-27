@@ -1,6 +1,6 @@
 # Vue3 Boilerplate
 
-This is a starting place for creating a Vue3 App with all the freshest hits like Vite, Pinia, Vuetify 3 beta, TS and Okta login
+This is a starting place for creating a Vue3 App with all the freshest hits like Vite, Pinia, Vuetify 3 beta, TS and user auth
 
 ## Quickstart
 ```sh
@@ -43,15 +43,19 @@ K5s48d!0ZDm7
 ```
 
 ## To-do
-* change auth to something more flexible/remove redirect
+* provide login and signup
+* purge the rest of okta and implement more robust user management
+* prod stuff:
+    - figure out how to get the right path for static assets
+    - since your app is statically hosted, set up a redirect for the auth-denied pages -- actually all routing is messed up
 * lazy-loading in router/index.ts
 * get knowing about CompositionAPI and OptionsAPI
 * scss -- maybe? css may be preferred
-* update footer link to github repo when you have one
 
 ## Done
 * absolute component paths
 * add Vuetify
+* change auth to something more flexible/remove redirect
 
 
 ## Type Support for `.vue` Imports in TS
