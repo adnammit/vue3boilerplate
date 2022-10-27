@@ -26,7 +26,8 @@ npm run lint
 * [Static deployment using Vite](https://vitejs.dev/guide/static-deploy.html)
 * [Render Deployment](https://dashboard.render.com/)
     - you can connect your github repo to Render and it will automatically deploy when new commits are pushed. neat!
-    - [https://vue3-boilerplate.onrender.com/](https://vue3-boilerplate.onrender.com/)
+    - [important notes about deploying Vue apps using redirects for proper router behavior](https://render.com/docs/deploy-vue-js)
+    - see this app in action at [https://vue3-boilerplate.onrender.com/](https://vue3-boilerplate.onrender.com/)
 * [Vuetify 3 beta](https://next.vuetifyjs.com/en/)
 * [Material Design Icons](https://materialdesignicons.com/)
 * [lint](https://eslint.org/)

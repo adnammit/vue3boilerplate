@@ -2,9 +2,9 @@
 	<v-app id="inspire">
 		<NavBar />
 		<v-main class="main-body">
-			<v-container>
+			<v-container fluid style="max-width: 80%;">
 				<v-row>
-					<v-col cols="2">
+					<v-col cols="12" md="3">
 						<FeedBar />
 					</v-col>
 
