@@ -1,5 +1,5 @@
 <template>
-	<v-card class="ma-6">
+	<v-card class="mx-1 my-3">
 		<v-card-title>
 			{{ title }}
 		</v-card-title>
@@ -14,7 +14,7 @@
 		<v-card-actions>
 			<v-row class="pa-2">
 				<v-col>
-					<v-dialog v-model="dialog" scrollable width="60%">
+					<v-dialog v-model="dialog" scrollable :width="width">
 						<template v-slot:activator="{ props }">
 							<v-btn variant="tonal" v-bind="props">
 								Read More
@@ -46,8 +46,8 @@
 </template>
 
 <script lang="ts">
-
 import { defineComponent } from 'vue'
+import { useMainStore } from '@/store'
 
 export default defineComponent({
 	props: {
@@ -70,7 +70,14 @@ export default defineComponent({
 				words.push('(...)')
 			}
 			return words.join(' ')
+		},
+		width(): string {
+			return (this.mainStore.isMobile) ? '90%'  : '60%'
 		}
+	},
+	setup() {
+		const mainStore = useMainStore()
+		return { mainStore }
 	}
 })
 </script>

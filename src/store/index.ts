@@ -4,6 +4,7 @@ import type { FeedItem } from '@/models/feedItem';
 import feedData from '@/store/feed.json'
 
 export type RootState = {
+	isMobile: boolean,
 	user: User | null,
 	error: string
 	filterSubject: string,
@@ -13,6 +14,7 @@ export type RootState = {
 export const useMainStore = defineStore({
 	id: 'main',
 	state: () => ({
+		isMobile: false,
 		user: null,
 		error: '',
 		filterSubject: '',
@@ -32,6 +34,9 @@ export const useMainStore = defineStore({
 		},
 		async logout() {
 			this.user = null
+		},
+		setMobile(isMobile: boolean) {
+			this.isMobile = isMobile
 		},
 		changeSubject(subject: string): boolean {
 			this.filterSubject = subject

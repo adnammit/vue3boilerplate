@@ -2,13 +2,13 @@
 	<v-app id="inspire">
 		<NavBar />
 		<v-main class="main-body">
-			<v-container fluid style="max-width: 80%;">
-				<v-row>
-					<v-col cols="12" md="3">
+			<v-container fluid>
+				<v-row justify="center">
+					<v-col cols="12" md="3" xl="2">
 						<FeedBar />
 					</v-col>
 
-					<v-col>
+					<v-col cols="12" md="8" xl="6">
 						<v-sheet min-height="70vh" rounded="lg" class="pa-6">
 							<router-view />
 						</v-sheet>
@@ -38,9 +38,10 @@ export default defineComponent({
 	},
 	created() {
 		this.mainStore.loadFeed()
+		this.mainStore.setMobile(this.mobile)
 	},
 	setup() {
-		const { mobile } = useDisplay() // is our client mobile-sized?
+		const { mobile } = useDisplay()
 		const mainStore = useMainStore()
 		return { mobile, mainStore }
 	}
