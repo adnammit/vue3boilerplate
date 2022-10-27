@@ -29,6 +29,10 @@ npm run lint
 * [lint](https://eslint.org/)
 * For Vue3 it is recommended to disable Vetur and use VSCode extensions [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) and [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 
+
+## Deployment
+* to deploy as a subdir to your website, maybe try `"build": "vite build --base=/vue3/"` in package.json
+
 ## Okta Auth
 Protected by [Okta OpenId authentication](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/) to keep your secrets safe.
 
