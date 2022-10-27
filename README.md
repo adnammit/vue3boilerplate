@@ -24,7 +24,11 @@ npm run lint
 * [More about Pinia](https://www.vuemastery.com/blog/advantages-of-pinia-vs-vuex/)
 * [Vite Configuration Reference](https://vitejs.dev/config/)
 * [Static deployment using Vite](https://vitejs.dev/guide/static-deploy.html)
+* [Render Deployment](https://dashboard.render.com/)
+    - you can connect your github repo to Render and it will automatically deploy when new commits are pushed. neat!
+    - [https://vue3-boilerplate.onrender.com/](https://vue3-boilerplate.onrender.com/)
 * [Vuetify 3 beta](https://next.vuetifyjs.com/en/)
+* [Material Design Icons](https://materialdesignicons.com/)
 * [lint](https://eslint.org/)
 * For Vue3 it is recommended to disable Vetur and use VSCode extensions [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) and [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 
@@ -35,8 +39,8 @@ npm run lint
 
 ## To-do
 * provide login and signup
+* implement more robust user management
 * make the FeedBar mobile-friendly
-* purge the rest of okta and implement more robust user management
 * prod stuff:
     - figure out how to get the right path for static assets
     - since your app is statically hosted, set up a redirect for the auth-denied pages -- actually all routing is messed up
@@ -48,6 +52,7 @@ npm run lint
 * absolute component paths
 * add Vuetify
 * change auth to something more flexible/remove redirect
+* purge the rest of okta
 
 
 ## Type Support for `.vue` Imports in TS

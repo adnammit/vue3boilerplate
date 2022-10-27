@@ -17,7 +17,7 @@
 						</v-col>
 						<v-col align="left" xs="12" md="6">
 							<v-avatar class="ma-6" size="100">
-								<v-img alt="Avatar" src="public/vibrates.png"></v-img>
+								<v-img alt="Avatar" :src="vibrates"></v-img>
 							</v-avatar>
 						</v-col>
 					</v-row>
@@ -74,6 +74,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useMainStore } from '@/store'
+import vibrates from '@/assets/vibrates.png'
 
 export default defineComponent({
 	name: 'Profile',
@@ -87,6 +88,11 @@ export default defineComponent({
 		email(): string {
 			return this.mainStore.email;
 		},
+	},
+	data() {
+		return {
+			vibrates: vibrates
+		}
 	},
 	setup() {
 		const mainStore = useMainStore()

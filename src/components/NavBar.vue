@@ -17,7 +17,7 @@
 			<v-menu v-if="isLoggedIn" open-on-hover :open-delay="0" location="bottom" transition="slide-x-transition">
 				<template v-slot:activator="{ props }">
 					<v-avatar class="mr-10 ml-4" size="52" v-bind="props">
-						<v-img alt="Avatar" src="public/vibrates.png"></v-img>
+						<v-img alt="Avatar" :src="vibrates"></v-img>
 					</v-avatar>
 				</template>
 
@@ -43,6 +43,7 @@
 import { defineComponent } from 'vue'
 import { useMainStore } from '@/store'
 import { useTheme } from 'vuetify'
+import vibrates from '@/assets/vibrates.png'
 
 export default defineComponent({
 	name: 'NavBar',
@@ -60,7 +61,8 @@ export default defineComponent({
 				{ text: 'Profile', icon: 'mdi-account-cowboy-hat', route: '/profile', click: null },
 				{ text: 'Settings', icon: 'mdi-cog', route: '/settings', click: null },
 				{ text: 'Logout', icon: 'mdi-exit-run', route: '', click: this.doLogout },
-			]
+			],
+			vibrates: vibrates
 		}
 	},
 	methods: {
