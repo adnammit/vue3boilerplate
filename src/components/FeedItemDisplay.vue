@@ -4,7 +4,7 @@
 			{{ title }}
 		</v-card-title>
 		<v-card-text>
-			<div class="text--primary pb-3">
+			<div class="subtitle--emphasis pb-3">
 				{{ author }}
 			</div>
 			<span style="white-space: pre-wrap;">
@@ -24,8 +24,8 @@
 							<v-card-title>{{ title }}</v-card-title>
 							<v-divider></v-divider>
 							<v-card-text style="height: 50vh;">
-								<div class="text--primary pb-3">
-									Author: {{ author }}
+								<div class="subtitle--emphasis pb-3">
+									{{ author }}
 								</div>
 								<span style="white-space: pre-wrap;">
 									{{ text }}
