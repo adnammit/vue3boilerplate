@@ -24,7 +24,6 @@ npm run lint
 * [More about Pinia](https://www.vuemastery.com/blog/advantages-of-pinia-vs-vuex/)
 * [Vite Configuration Reference](https://vitejs.dev/config/)
 * [Static deployment using Vite](https://vitejs.dev/guide/static-deploy.html)
-* [Okta and Vue3](https://stackoverflow.com/questions/70910754/how-to-set-up-a-vue-app-with-okta-auth-with-composition-api)
 * [Vuetify 3 beta](https://next.vuetifyjs.com/en/)
 * [lint](https://eslint.org/)
 * For Vue3 it is recommended to disable Vetur and use VSCode extensions [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) and [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
@@ -33,18 +32,6 @@ npm run lint
 ## Deployment
 * to deploy as a subdir to your website, maybe try `"build": "vite build --base=/vue3/"` in package.json
 
-## Okta Auth
-Protected by [Okta OpenId authentication](https://developer.okta.com/docs/guides/sign-into-spa-redirect/vue/main/) to keep your secrets safe.
-
-Auth is configured in config.json and can be accessed in the application by importing auth.ts
-
-To protect a page, add the `requiresAuth` attribute to its route in `router/index`
-
-Website can be accessed via a test account:
-```
-test@amandaryman.com
-K5s48d!0ZDm7
-```
 
 ## To-do
 * provide login and signup
