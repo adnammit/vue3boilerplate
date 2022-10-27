@@ -1,17 +1,22 @@
 import { defineStore } from 'pinia'
 import type { User } from '@/models/user';
+import type { FeedItem } from '@/models/feedItem';
+import feedData from '@/store/feed.json'
 
 export type RootState = {
-	title: string,
 	user: User | null,
 	error: string
+	filterSubject: string,
+	feed: FeedItem[],
 }
 
 export const useMainStore = defineStore({
 	id: 'main',
 	state: () => ({
 		user: null,
-		error: ''
+		error: '',
+		filterSubject: '',
+		feed: []
 	} as RootState),
 
 	actions: {
@@ -27,6 +32,22 @@ export const useMainStore = defineStore({
 		},
 		async logout() {
 			this.user = null
+		},
+		changeSubject(subject: string): boolean {
+			this.filterSubject = subject
+			return true
+		},
+		loadFeed() {
+			this.feed = feedData.map((d: any) => {
+				return {
+					id: d.id as number,
+					subject: d.subject,
+					title: d.title,
+					author: d.author,
+					text: d.text,
+					publishDate: d.publishDate
+				} as FeedItem
+			})
 		}
 	},
 
@@ -34,6 +55,6 @@ export const useMainStore = defineStore({
 		username: (state: RootState): string => state.user && state.user.username ? state.user.username : '',
 		fullName: (state: RootState): string => state.user && state.user.fullName ? state.user.fullName : '',
 		email: (state: RootState): string => state.user && state.user.email ? state.user.email : '',
-		isLoggedIn: (state: RootState): boolean => (state.user != null && !!state.user.username)
+		isLoggedIn: (state: RootState): boolean => (state.user != null && !!state.user.username),
 	}
 })

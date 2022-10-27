@@ -11,7 +11,7 @@
 					</div>
 				</v-card-text>
 				<v-card-actions>
-					<v-btn>Click me</v-btn>
+					<!-- <v-btn>Click me</v-btn> -->
 				</v-card-actions>
 			</div>
 		</div>

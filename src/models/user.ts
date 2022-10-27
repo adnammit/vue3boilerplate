@@ -4,5 +4,3 @@ export interface User {
 	fullName: string,
 	password: string
 }
-
-export type UserList = Array<User & { password: string }>

@@ -11,16 +11,16 @@
 						Sign up to join our cow-munity!
 					</div>
 
-					<v-text-field v-model="firstName" :counter="50" :rules="defaultRules" label="First Name" required>
+					<v-text-field v-model="firstName" :counter="50" :rules="defaultRules" label="First Name" required variant="outlined">
 					</v-text-field>
 
-					<v-text-field v-model="lastName" :counter="50" :rules="defaultRules" label="Last Name" required>
+					<v-text-field v-model="lastName" :counter="50" :rules="defaultRules" label="Last Name" required variant="outlined">
 					</v-text-field>
 
-					<v-text-field v-model="username" :counter="50" :rules="defaultRules" label="Username" required>
+					<v-text-field v-model="username" :counter="50" :rules="defaultRules" label="Username" required variant="outlined">
 					</v-text-field>
 
-					<v-text-field v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
+					<v-text-field v-model="email" :rules="emailRules" label="E-mail" required variant="outlined"></v-text-field>
 
 					<!-- <v-text-field v-model="password" :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'" :rules="passwordRules"
 						:type="show ? 'text' : 'password'" name="input-10-1" label="Normal with hint text" hint="At least 8 characters"
@@ -28,7 +28,7 @@
 
 					<v-row justify="space-around">
 						<v-col>
-							<v-btn flat color="secondary" :disabled="!valid" class="mr-4" @click="validate"
+							<v-btn flat color="secondary" :disabled="!valid" class="mr-4 color--bold" @click="validate"
 								type="submit">Sign Up</v-btn>
 							<v-btn variant="tonal" class="mr-4" @click="reset">Reset Form</v-btn>
 						</v-col>

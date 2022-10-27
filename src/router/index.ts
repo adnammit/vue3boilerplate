@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import Profile from '@/views/Profile.vue'
 import Login from '@/views/Login.vue'
 import Settings from '@/views/Settings.vue'
+import Feed from '@/views/Feed.vue'
 import { useMainStore } from '@/store'
 
 const router = createRouter({
@@ -41,6 +42,11 @@ const router = createRouter({
 			meta: {
 				requiresAuth: true
 			}
+		},
+		{
+			path: '/feed',
+			name: 'feed',
+			component: Feed,
 		},
 	]
 })

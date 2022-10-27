@@ -48,6 +48,7 @@ K5s48d!0ZDm7
 
 ## To-do
 * provide login and signup
+* make the FeedBar mobile-friendly
 * purge the rest of okta and implement more robust user management
 * prod stuff:
     - figure out how to get the right path for static assets
