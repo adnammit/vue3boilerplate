@@ -20,6 +20,7 @@ npm run lint
 ## Notes
 * [Typescript and Vue3](https://vuejs.org/guide/typescript/overview.html)
 * [more in depth TS info here](https://blog.logrocket.com/how-to-use-vue-3-typescript/)
+* [how to transition from vue-class-components to the CompositionAPI](https://levelup.gitconnected.com/from-vue-class-component-to-composition-api-ef3c3dd5fdda)
 * Vuex is being deprecated so let's use [Pinia! 🍍](https://pinia.vuejs.org/core-concepts/)
 * [More about Pinia](https://www.vuemastery.com/blog/advantages-of-pinia-vs-vuex/)
 * [Vite Configuration Reference](https://vitejs.dev/config/)
@@ -41,11 +42,8 @@ npm run lint
 ## To-do
 * provide login and signup
 * implement more robust user management
-* prod stuff:
-    - figure out how to get the right path for static assets
-    - since your app is statically hosted, set up a redirect for the auth-denied pages -- actually all routing is messed up
 * lazy-loading in router/index.ts
-* get knowing about CompositionAPI and OptionsAPI
+* get knowing about CompositionAPI and OptionsAPI -- check that you're using best practices
 * scss -- maybe? css may be preferred
 
 ## Done

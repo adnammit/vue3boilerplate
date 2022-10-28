@@ -66,7 +66,7 @@ export default defineComponent({
 			let words = this.text?.split(' ') ?? []
 			if (words?.length > this.maxPreviewWordLength)
 			{
-				words.slice(0, this.maxPreviewWordLength)
+				words = words.slice(0, this.maxPreviewWordLength)
 				words.push('(...)')
 			}
 			return words.join(' ')
