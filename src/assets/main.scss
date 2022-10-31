@@ -42,6 +42,11 @@
 	}
 }
 
+.v-theme--light .v-list-item__overlay,
+.v-theme--dark .v-list-item__overlay {
+	opacity: 0;
+}
+
 a {
 	text-decoration: none;
 	color: $curious-blue;
