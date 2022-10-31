@@ -8,7 +8,7 @@
 		</div>
 		<!-- if no content, display 'no content' -->
 		<FeedItemDisplay v-for="(item, index) in filteredFeed" :title="item.title" :text="item.text"
-			:author="item.author" :key="item.id" />
+			:author="item.author" :imgUrl="item.imgUrl" :key="item.id" />
 	</div>
 </template>
 

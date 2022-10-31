@@ -4,5 +4,6 @@ export interface FeedItem {
 	title: string,
 	author: string,
 	text: string,
-	publishDate: Date
+	publishDate: Date,
+	imgUrl: string
 }

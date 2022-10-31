@@ -1,5 +1,5 @@
 <template>
-	<v-card class="mx-1 my-3 py-3"  @click="dialog=true">
+	<v-card class="mx-1 my-3 py-3" @click="dialog = true">
 		<v-card-title>
 			{{ title }}
 		</v-card-title>
@@ -7,9 +7,19 @@
 			<div class="subtitle--emphasis pb-3">
 				{{ author }}
 			</div>
-			<span style="white-space: pre-wrap;">
-				{{ quickText }}
-			</span>
+			<v-container class="px-0">
+				<v-row align="center" justify="" no-gutters>
+					<v-col align="left" class="flex-grow-1 flex-shrink-0 pr-5">
+						<span style="white-space: pre-wrap;">
+							{{ quickText }}
+						</span>
+					</v-col>
+					<v-col align="right" cols="12" sm="4" md="3" class="py-5">
+						<v-img cover aspect-ratio="1" :src="imgUrl" class="rounded-xl" :max-height="imgSizeThm" :max-width="imgSizeThm">
+						</v-img>
+					</v-col>
+				</v-row>
+			</v-container>
 		</v-card-text>
 	</v-card>
 	<v-dialog v-model="dialog" scrollable :width="width">
@@ -20,13 +30,14 @@
 				<div class="subtitle--emphasis pb-3">
 					{{ author }}
 				</div>
+				<v-img cover aspect-ratio="1" :src="imgUrl" class="rounded-xl ml-3 mb-3" :class="{ 'float-right': !isMobile }" :height="imgSizeFull" :width="imgSizeFull"></v-img>
 				<span style="white-space: pre-wrap;">
 					{{ text }}
 				</span>
 			</v-card-text>
 			<v-divider></v-divider>
 			<v-card-actions>
-				<v-btn variant="tonal" @click="dialog=false">
+				<v-btn variant="tonal" @click="dialog = false">
 					Close
 				</v-btn>
 			</v-card-actions>
@@ -42,7 +53,8 @@ export default defineComponent({
 	props: {
 		title: String,
 		text: String,
-		author: String
+		author: String,
+		imgUrl: String
 	},
 	data() {
 		return {
@@ -53,15 +65,23 @@ export default defineComponent({
 	computed: {
 		quickText(): string {
 			let words = this.text?.split(' ') ?? []
-			if (words?.length > this.maxPreviewWordLength)
-			{
+			if (words?.length > this.maxPreviewWordLength) {
 				words = words.slice(0, this.maxPreviewWordLength)
 				words.push('(...)')
 			}
 			return words.join(' ')
 		},
 		width(): string {
-			return (this.mainStore.isMobile) ? '90%'  : '60%'
+			return (this.isMobile) ? '90%' : '60%'
+		},
+		imgSizeThm(): string {
+			return (this.isMobile) ? '100%' : '175'
+		},
+		imgSizeFull(): string {
+			return (this.isMobile) ? '75vw' : '275'
+		},
+		isMobile(): boolean {
+			return this.mainStore.isMobile
 		}
 	},
 	setup() {

@@ -50,7 +50,8 @@ export const useMainStore = defineStore({
 					title: d.title,
 					author: d.author,
 					text: d.text,
-					publishDate: d.publishDate
+					publishDate: d.publishDate,
+					imgUrl: d.imgUrl
 				} as FeedItem
 			})
 		}
