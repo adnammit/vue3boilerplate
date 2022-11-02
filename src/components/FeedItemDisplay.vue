@@ -8,7 +8,7 @@
 				{{ author }}
 			</div>
 			<v-container class="px-0">
-				<v-row align="center" justify="" no-gutters>
+				<v-row align="center" no-gutters>
 					<v-col align="left" class="flex-grow-1 flex-shrink-0 pr-5">
 						<span style="white-space: pre-wrap;">
 							{{ quickText }}
